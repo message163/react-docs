@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Fast learning
-      link: /markdown-examples
+      link: /basic/introduce
     - theme: alt
       text: API Examples
-      link: /api-examples
+      link: /
 
 features:
   - title: react 最新教程
