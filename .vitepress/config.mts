@@ -21,7 +21,8 @@ export default defineConfig({
         text: '入门',
         items: [
           { text: 'React基本介绍', link: '/basic/introduce' },
-          { text: 'React开发环境搭建', link: '/basic/development' }
+          { text: 'React开发环境搭建', link: '/basic/development' },
+          { text: 'tsx语法入门', link: '/basic/tsx' }
         ]
       }
     ],

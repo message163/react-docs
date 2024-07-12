@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a2 as n}from"./chunks/framework.D0HsHkqt.js";const c=JSON.parse('{"title":"tsx语法入门","description":"","frontmatter":{},"headers":[],"relativePath":"basic/tsx.md","filePath":"basic/tsx.md"}'),l={name:"basic/tsx.md"},t=n("",16),h=[t];function k(p,e,E,d,r,g){return a(),i("div",null,h)}const F=s(l,[["render",k]]);export{c as __pageData,F as default};

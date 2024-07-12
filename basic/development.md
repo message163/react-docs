@@ -30,9 +30,15 @@ npm init vite
 - vite.config.ts vite配置文件
 
 ### FAQ:
-**public公共目录和assets静态资源有什么区别?**
+- **public公共目录和assets静态资源有什么区别?**
 
 答：public目录的资源编译之后会存放到根目录，而静态资源assets是会随着项目一起打包的，public则不会被编译。
+
+- **为什么main.tsx的`document.getElementById('root')!`要加一个!**
+
+答：因为`document.getElementById('root')`返回可能为空，这时候就会报错。!是非空断言，告诉编辑器这个表达式不会为空。
+
+
 
 ## 命令介绍(package.json)
 
