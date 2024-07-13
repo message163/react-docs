@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./chunks/framework.D0HsHkqt.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useReducer.md","filePath":"hooks/useReducer.md"}'),s={name:"hooks/useReducer.md"};function r(a,c,n,d,u,p){return o(),t("div")}const m=e(s,[["render",r]]);export{i as __pageData,m as default};

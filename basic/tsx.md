@@ -41,6 +41,24 @@ function App() {
     </>
   )
 }
+//绑定多个class(className)
+function App() {
+  const a:string = 'A'
+  return (
+    <>
+      <div className={`${a} class2`}>{value}</div>
+    </>
+  )
+}
+//绑定样式style
+function App() {
+  const styles = { color: 'red' }
+  return (
+    <>
+      <div style={styles}>test</div>
+    </>
+  )
+}
 ```
 
 - 使用tsx绑定事件`on[Click]{fn}`小驼峰 其他事件也是一样的
