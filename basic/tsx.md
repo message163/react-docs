@@ -21,10 +21,14 @@
 
 ```tsx
 function App() {
-  const value:string = '小满'
+  const num: number = 333
+  const fn = () => 'test'
   return (
     <>
-      <div>{value}</div>
+      {'11' /** 字符串用法 */}
+      {num /** 变量用法 */}
+      {fn() /** 函数用法 */}
+      {new Date().getTime() /** 日期用法 */}
     </>
   )
 }
@@ -64,6 +68,113 @@ function App() {
   return (
     <>
       <div onClick={() => clickTap(value)}>{value}</div>
+    </>
+  )
+}
+```
+
+- tsx如何渲染html代码片段(dangerouslySetInnerHTML)
+
+dangerouslySetInnerHTML 的值是一个对象，该对象包含一个名为 __html 的属性，且值为你想要插入的 HTML 字符串
+```tsx
+function App() {
+  const value: string = '<section style="color:red">小满</section>'
+  return (
+    <>
+        <div dangerouslySetInnerHTML={{ __html: value }}></div>
+    </>
+  )
+}
+```
+
+- tsx如何遍历dom元素
+
+使用map遍历返回html标签即可
+
+```tsx
+function App() {
+  const arr: string[] = ["小满","中满","大满"]
+  return (
+    <>
+        {
+            arr.map((item) => {
+                return <div>{item}</div>
+            })
+        }
+    </>
+  )
+}
+```
+
+- tsx如何编写条件语句
+
+使用三元表达式就可以了
+
+```tsx
+function App() {
+  const flag:boolean = true
+  return (
+    <>
+        {
+           flag ? <div>真的</div> : <div>假的</div>
+        }
+    </>
+  )
+}
+```
+
+- tsx注意事项
+
+**{}插值语句内不允许编写`switch` `if` `变量声明` 或者直接放入`对象本体`**
+
+下面展示错误用法正确用法对比
+
+```tsx
+//错误用法
+function App() {
+  const obj = { name: '小满' }
+  return (
+    <>
+      {obj}
+    </>
+  )
+}
+//正确用法
+function App() {
+  const obj = { name: '小满' }
+  return (
+    <>
+      {obj.name}
+      {JSON.stringify(obj)}
+    </>
+  )
+}
+```
+
+```tsx
+//错误用法
+function App() {
+  const flag:boolean = true
+  return (
+    <>
+       {
+        if(flag){
+          <p>1</p>
+        }else{
+          <p>2</p>
+        }
+       }
+    </>
+  )
+}
+//正确用法
+function App() {
+  const flag:boolean = true
+  return (
+    <>
+       {
+        flag ? <div>1</div> : <div>2</div>
+       }
     </>
   )
 }
