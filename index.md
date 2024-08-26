@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "react docs"
   text: "this is react docs for xiaoman"
-  tagline: My great project tagline
+  tagline: "react docs for xiaoman"
   actions:
     - theme: brand
       text: Fast learning
@@ -16,10 +16,10 @@ hero:
 
 features:
   - title: react 最新教程
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: react19 react-hooks
   - title: react 全家桶
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 周边技术
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: react react-router redux 
+  - title: 周边技术 + 源码
+    details: Antd Umijs Next.js react-native
 ---
 

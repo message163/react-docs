@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as t}from"./chunks/framework.D0HsHkqt.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useDeferredValue.md","filePath":"hooks/useDeferredValue.md"}'),a={name:"hooks/useDeferredValue.md"};function o(s,c,n,d,f,u){return t(),r("div")}const _=e(a,[["render",o]]);export{p as __pageData,_ as default};

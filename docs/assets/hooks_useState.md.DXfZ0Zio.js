@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.CIkl8209.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useState.md","filePath":"hooks/useState.md"}'),o={name:"hooks/useState.md"};function s(r,c,n,p,_,d){return a(),t("div")}const f=e(o,[["render",s]]);export{m as __pageData,f as default};

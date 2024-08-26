@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.D0HsHkqt.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useTransition.md","filePath":"hooks/useTransition.md"}'),s={name:"hooks/useTransition.md"};function a(n,r,i,c,p,_){return o(),t("div")}const f=e(s,[["render",a]]);export{m as __pageData,f as default};

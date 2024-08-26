@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.CIkl8209.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"components/base.md","filePath":"components/base.md"}'),o={name:"components/base.md"};function s(n,c,r,p,m,_){return a(),t("div")}const f=e(o,[["render",s]]);export{i as __pageData,f as default};

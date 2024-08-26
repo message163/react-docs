@@ -35,7 +35,17 @@ export default defineConfig({
       {
         text: '组件',
         items: [
-          { text: '认识组件', link: '/components/base' }
+          { text: '认识组件', link: '/components/base' },
+          { text: '组件通信', link: '/components/communication' },
+          { text: '受控组件', link: '/components/controlled' },
+          { text: '传送组件', link: '/components/createPortal' }
+        ]
+      },
+      {
+        text: 'css方案',
+        items: [
+          { text: 'css modules', link: '/css/less' },
+          { text: 'css in js', link: '/css/sass' },
         ]
       },
       {
@@ -79,6 +89,12 @@ export default defineConfig({
             items: [
               { text: 'useDebugValue', link: '/hooks/useEffect' },
               { text: 'useId', link: '/hooks/useDebugValue' }
+            ]
+          },
+          {
+            text: '其他',
+            items: [
+              { text: '自定义hooks', link: '/hooks/custom' },
             ]
           }
         ]

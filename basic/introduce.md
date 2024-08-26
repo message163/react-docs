@@ -2,7 +2,9 @@
 
 # React入门
 
-## 什么是react?
+## 什么是react? 
+
+![plugin](./source/react.svg)
 
 React 是一个用于构建用户界面的 JavaScript 库。它由 Facebook(现Meta) 开发和维护，并在2013年开源。React 的设计初衷是帮助开发者构建复杂的用户界面，同时保持代码的可维护性和可扩展性。
 
@@ -25,13 +27,25 @@ React 是一个用于构建用户界面的 JavaScript 库。它由 Facebook(现M
 - JavaScript`(es6+)`
 - HTML
 - CSS
-- TypeScript [Typescript教程](https://www.bilibili.com/video/BV1wR4y1377K/?spm_id_from=333.999.0.0)
+- TypeScript(基本使用) [Typescript教程](https://www.bilibili.com/video/BV1wR4y1377K/?spm_id_from=333.999.0.0)
+- Npm包管理器
 
 ## React市场情况
-npm官网统计(不包含镜像) 2024-7-15
+npm官网统计(不包含镜像) 2024-8-26
 
 1. react   18.3.1 周下载量 `22,538,510`
 2. vue     3.4.31 周下载量 `4,699,312`
 3. Angular 18.1.0 周下载量 `3,216,414`
 4. jQuery  3.7.10 周下载量 `10,210,940`
 5. solid   1.8.18 周下载量 `288,278`
+
+## 安装环境准备
+
+1. node.js
+下载地址：https://nodejs.org/en **建议安装18以上版本，或者使用nvm管理node版本**
+2. vsocde编辑器(如果安装过了请略过|或者喜欢其他编辑器) https://code.visualstudio.com/
+3. vscode插件安装 可选 (`Simple React Snippets`)
+
+![plugin](./source/vscode.png)
+
+![alt text](https://github.com/burkeholland/simple-react-snippets/raw/HEAD/images/snippets-in-action.gif)
