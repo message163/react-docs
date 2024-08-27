@@ -1,1 +1,0 @@
-import{_ as t,c as o,o as e}from"./chunks/framework.CIkl8209.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"components/communication.md","filePath":"components/communication.md"}'),n={name:"components/communication.md"};function c(a,m,s,i,r,p){return e(),o("div")}const f=t(n,[["render",c]]);export{d as __pageData,f as default};

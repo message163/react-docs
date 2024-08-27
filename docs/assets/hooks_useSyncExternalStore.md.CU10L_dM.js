@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.CIkl8209.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useSyncExternalStore.md","filePath":"hooks/useSyncExternalStore.md"}'),r={name:"hooks/useSyncExternalStore.md"};function a(n,s,c,l,p,_){return o(),t("div")}const m=e(r,[["render",a]]);export{i as __pageData,m as default};

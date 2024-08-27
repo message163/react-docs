@@ -7,6 +7,13 @@ export default defineConfig({
   outDir: "./docs",
   description: "this is react docs for xiaoman",
   themeConfig: {
+    logo: '/logo.png',
+    search: {
+      provider: 'local',
+    },
+    lastUpdated: {
+      text: '更新时间',
+    },
     outline: {
       label: '文章目录',
     },
@@ -103,6 +110,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/message163/react-docs.git' }
-    ]
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024-present xiaoman'
+    }
   }
 })
