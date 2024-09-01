@@ -4,7 +4,7 @@
 
 ## 什么是react? 
 
-![plugin](./source/react.svg)
+<img width="100px" src="./source/react.svg">
 
 React 是一个用于构建用户界面的 JavaScript 库。它由 Facebook(现Meta) 开发和维护，并在2013年开源。React 的设计初衷是帮助开发者构建复杂的用户界面，同时保持代码的可维护性和可扩展性。
 

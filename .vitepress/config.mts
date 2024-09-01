@@ -45,7 +45,8 @@ export default defineConfig({
           { text: '认识组件', link: '/components/base' },
           { text: '组件通信', link: '/components/communication' },
           { text: '受控组件', link: '/components/controlled' },
-          { text: '传送组件', link: '/components/createPortal' }
+          { text: '传送组件', link: '/components/createPortal' },
+          { text: '异步组件', link: '/components/suspense' }
         ]
       },
       {
@@ -53,6 +54,7 @@ export default defineConfig({
         items: [
           { text: 'css modules', link: '/css/less' },
           { text: 'css in js', link: '/css/sass' },
+          { text: 'css 原子化', link: '/css/tailwind' }
         ]
       },
       {
@@ -81,7 +83,8 @@ export default defineConfig({
             items: [
               { text: 'useReducer', link: '/hooks/useReducer' },
               { text: 'useRef', link: '/hooks/useRef' },
-              { text: 'useImperativeHandle', link: '/hooks/useImperativeHandle' }
+              { text: 'useImperativeHandle', link: '/hooks/useImperativeHandle' },
+              { text: 'useContext', link: '/hooks/useContext' },
             ]
           },
           {
