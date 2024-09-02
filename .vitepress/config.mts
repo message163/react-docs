@@ -36,7 +36,7 @@ export default defineConfig({
         text: '工具',
         items: [
           { text: 'Babel', link: '/tools/babel' },
-          { text: 'Swc', link: '/markdown-examples' }
+          { text: 'Swc', link: '/tools/swc' }
         ]
       },
       {
