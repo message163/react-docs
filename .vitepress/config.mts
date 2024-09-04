@@ -29,14 +29,15 @@ export default defineConfig({
         items: [
           { text: 'React基本介绍', link: '/basic/introduce' },
           { text: 'React开发环境搭建', link: '/basic/development' },
-          { text: 'tsx语法入门', link: '/basic/tsx' }
+          { text: 'tsx语法入门', link: '/basic/tsx' },
         ]
       },
       {
         text: '工具',
         items: [
           { text: 'Babel', link: '/tools/babel' },
-          { text: 'Swc', link: '/tools/swc' }
+          { text: 'Swc', link: '/tools/swc' },
+          { text: '简易版Vdom', link: '/tools/vdom' }
         ]
       },
       {

@@ -1,5 +1,5 @@
 
-
+https://swc.rs/logo.png
 # React入门
 
 ## 什么是react? 
@@ -31,7 +31,7 @@ React 是一个用于构建用户界面的 JavaScript 库。它由 Facebook(现M
 - Npm包管理器
 
 ## React市场情况
-npm官网统计(不包含镜像) 2024-8-26
+npm官网统计(不包含镜像) 2024-9-4
 
 1. react   18.3.1 周下载量 `22,538,510`
 2. vue     3.4.31 周下载量 `4,699,312`
