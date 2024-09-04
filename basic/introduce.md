@@ -1,5 +1,3 @@
-
-https://swc.rs/logo.png
 # React入门
 
 ## 什么是react? 
