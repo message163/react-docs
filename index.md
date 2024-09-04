@@ -17,6 +17,9 @@ hero:
     - theme: alt
       text: 掘金
       link: https://juejin.cn/user/2463384809252397
+    - theme: alt
+      text: CSDN
+      link: https://blog.csdn.net/qq1195566313?type=blog
   image:
     src: /logo.png
 
