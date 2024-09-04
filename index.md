@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: 哔哩哔哩视频教程
       link: https://space.bilibili.com/99210573?spm_id_from=333.1007.0.0
+    - theme: alt
+      text: 掘金
+      link: https://juejin.cn/user/2463384809252397
   image:
     src: /logo.png
 
