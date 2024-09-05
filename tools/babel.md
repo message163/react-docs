@@ -12,6 +12,8 @@ AST -> Transform -> Generate
 
 查看AST https://astexplorer.net/
 
+Babel所有的包 https://babeljs.io/docs/babel-traverse
+
 ## 核心功能
 
 1. 语法转换：将新版本的 JavaScript 语法转换为旧版本的语法
