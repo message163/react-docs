@@ -10,7 +10,16 @@ SWC 既可用于编译，也可用于打包。对于编译，它使用现代 Jav
 
  简单点来说swc实现了和babel一样的功能，但是它比babel快。
 
- 官网 https://swc.rs/
+ FAQ为什么快?
+
+ 1. 编译型
+ Rust 是一种编译型语言，在编译时将代码转化为机器码（底层的 CPU 指令）。这种机器码在执行时非常高效，几乎不需要额外的开销。
+
+ 2. 解释型
+ JavaScript 是一种解释型语言，通常在浏览器或 Node.js 环境中通过解释器运行。尽管现代的 JavaScript 引擎（如 V8 引擎）使用了 JIT（即时编译）技术来提高性能，但解释型语言本质上还是需要更多的运行时开销。
+ 
+
+ swc官网 https://swc.rs/
 
  ## 核心功能
  1. JavaScript/TypeScript 转换  可以将现代 JavaScript（ES6+）和 TypeScript 代码转换为兼容旧版 JavaScript 环境的代码。这包括语法转换（如箭头函数、解构赋值等）以及一些 polyfill 的处理
