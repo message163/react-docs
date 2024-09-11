@@ -78,7 +78,9 @@ const React = {
 Fiber 是 React 16 引入的一种新的协调引擎，用于解决和优化 React 应对复杂 UI 渲染时的性能问题
 
 React源码解析英文版 https://pomb.us/build-your-own-react/
+
 未使用fiber版本 https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html
+
 已使用fiber版本 https://claudiopro.github.io/react-fiber-vs-stack-demo/fiber.html
 
 ## Fiber 的作用
