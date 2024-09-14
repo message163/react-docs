@@ -37,7 +37,13 @@ export default defineConfig({
         items: [
           { text: 'Babel', link: '/tools/babel' },
           { text: 'Swc', link: '/tools/swc' },
-          { text: '简易版Vdom', link: '/tools/vdom' }
+        ]
+      },
+      {
+        text: '原理',
+        items: [
+          { text: 'vdom fiber diff', link: '/principle/vdom' },
+          { text: 'requestidlecallback', link: '/principle/requestidlecallback' }
         ]
       },
       {
@@ -121,7 +127,7 @@ export default defineConfig({
       copyright: 'Copyright © 2024-present xiaoman'
     }
   },
-  markdown:{
-    lineNumbers:true
+  markdown: {
+    lineNumbers: true
   }
 })
