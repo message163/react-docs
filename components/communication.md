@@ -49,7 +49,7 @@ export default App
 - number `id={1}`
 - boolean `isGirl={false}`
 - null  `empty={null}`
-- undefined  `empty={null}`
+- undefined  `empty={undefined}`
 - object  `obj={ { a: 1, b: 2 } }`
 - array  `arr={[1, 2, 3]}`
 - function `cb={(a: number, b: number) => a + b}`
