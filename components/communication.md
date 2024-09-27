@@ -81,6 +81,8 @@ props是一个对象，会作为函数的第一个参数接受传过来的props�
 
 **`注意：我们需要遵守单向数据流，子组件不能直接修改父组件的props`**
 
+在React源码中会使用`Object.freeze`冻结props，限制props的修改。
+
 ```tsx
 import React from "react"
 interface Props {
