@@ -83,6 +83,8 @@ props是一个对象，会作为函数的第一个参数接受传过来的props�
 
 在React源码中会使用`Object.freeze`冻结props，限制props的修改。
 
+Object.freeze() 静态方法可以使一个对象被冻结。冻结对象可以防止扩展，并使现有的属性不可写入和不可配置。被冻结的对象不能再被更改：不能添加新的属性，不能移除现有的属性，不能更改它们的可枚举性、可配置性、可写性或值，对象的原型也不能被重新指定
+
 ```tsx
 import React from "react"
 interface Props {
