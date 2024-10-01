@@ -72,7 +72,7 @@ export default defineConfig({
             items: [
               { text: 'useState', link: '/hooks/useState' },
               { text: 'useReducer', link: '/hooks/useReducer' },
-              { text: 'useSyncExternalStore', link: '/hooks/useRef' },
+              { text: 'useSyncExternalStore', link: '/hooks/useSyncExternalStore' },
               { text: 'useTransition', link: '/hooks/useMemo' },
               { text: 'useDeferredValue', link: '/hooks/useCallback' }
             ]
@@ -81,7 +81,7 @@ export default defineConfig({
             text: '副作用',
             items: [
               { text: 'useEffect', link: '/hooks/useContext' },
-              { text: 'useLayoutEffect', link: '/hooks/useRef' },
+              { text: 'useLayoutEffect', link: '/hooks/useLayoutEffect' },
               { text: 'useInsertionEffect', link: '/hooks/useImperativeHandle' }
             ]
           },
