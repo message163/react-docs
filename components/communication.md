@@ -2,6 +2,8 @@
 
 React 组件使用 `props` 来互相通信。每个父组件都可以提供 props 给它的子组件，从而将一些信息传递给它。Props 可能会让你想起 HTML 属性，但你可以通过它们传递任何 JavaScript 值，包括对象、数组和函数 以及html 元素，这样可以使我们的组件更加灵活。
 
+获取本章代码 https://github.com/message163/react-course/tree/props 分支 `props`
+
 例如我们在使用原生html标签时,我们可以为其传递属性，如下
 
 ```html

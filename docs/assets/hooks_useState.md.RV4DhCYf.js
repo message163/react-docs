@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.BmjnFjMf.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useState.md","filePath":"hooks/useState.md","lastUpdated":1720859169000}'),s={name:"hooks/useState.md"};function o(r,c,n,d,p,_){return a(),t("div")}const f=e(s,[["render",o]]);export{m as __pageData,f as default};

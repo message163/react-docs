@@ -88,7 +88,6 @@ export default defineConfig({
           {
             text: '状态传递',
             items: [
-              { text: 'useReducer', link: '/hooks/useReducer' },
               { text: 'useRef', link: '/hooks/useRef' },
               { text: 'useImperativeHandle', link: '/hooks/useImperativeHandle' },
               { text: 'useContext', link: '/hooks/useContext' },
