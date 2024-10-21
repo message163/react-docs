@@ -1,8 +1,13 @@
 # useReducer
 
+`useReducer`是React提供的一个高级Hook,没有它我们也可以正常开发，但是`useReducer`可以使我们的代码具有更好的可读性，可维护性。
+
 `useReducer` 跟 `useState` 一样的都是帮我们管理组件的`状态`的，但是呢与`useState`不同的是 `useReducer` 是`集中式`的管理状态的。
 
+
 ## 用法
+
+![alt text](img/useReducer.png)
 
 ```ts
 const [state, dispatch] = useReducer(reducer, initialArg, init?)
@@ -36,7 +41,6 @@ function MyComponent() {
   const [state, dispatch] = useReducer(reducer, { age: 42,name:'小满' });
   // ...
 ```
-
 ## 计数器案例
 
 初始状态 (initialState):
