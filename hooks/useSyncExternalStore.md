@@ -19,7 +19,23 @@ const res = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)
 - getSnapshot：获取当前数据源的快照（当前状态）。
 - getServerSnapshot?：在服务器端渲染时用来获取数据源的快照。
 
-返回值：该 store 的当前快照，可以在你的渲染逻辑中使用
+返回值：该 res 的当前快照，可以在你的渲染逻辑中使用
+
+```ts
+const subscribe = (callback: () => void) => {
+    // 订阅
+    callback() 
+    return () => { 
+        // 取消订阅
+    }
+}
+
+const getSnapshot = () => {
+    return data
+}
+
+const res = useSyncExternalStore(subscribe, getSnapshot)
+```
 
 ## 案例
 
