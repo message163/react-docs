@@ -6,6 +6,9 @@ export default defineConfig({
   base: "/react-docs/",
   outDir: "./docs",
   description: "this is react docs for xiaoman",
+  head:[
+    ['link', { rel: 'icon', href: '/react.ico' }]
+  ],
   themeConfig: {
     logo: '/logo.png',
     search: {
@@ -73,8 +76,8 @@ export default defineConfig({
               { text: 'useState', link: '/hooks/useState' },
               { text: 'useReducer', link: '/hooks/useReducer' },
               { text: 'useSyncExternalStore', link: '/hooks/useSyncExternalStore' },
-              { text: 'useTransition', link: '/hooks/useMemo' },
-              { text: 'useDeferredValue', link: '/hooks/useCallback' }
+              { text: 'useTransition', link: '/hooks/useTransition' },
+              { text: 'useDeferredValue', link: '/hooks/useDeferredValue' }
             ]
           },
           {
