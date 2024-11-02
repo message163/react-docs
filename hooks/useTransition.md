@@ -26,6 +26,11 @@ const [isPending, startTransition] = useTransition();
 
 并且我们结合vite插件实现一个api,这个api可以帮助我们模拟数据
 
+```sh
+npm install mockjs
+```
+mockjs文档地址：https://github.com/nuysoft/Mock/wiki/Getting-Started
+
 ```ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
