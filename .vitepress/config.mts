@@ -83,7 +83,7 @@ export default defineConfig({
           {
             text: '副作用',
             items: [
-              { text: 'useEffect', link: '/hooks/useContext' },
+              { text: 'useEffect', link: '/hooks/useEffect' },
               { text: 'useLayoutEffect', link: '/hooks/useLayoutEffect' },
               { text: 'useInsertionEffect', link: '/hooks/useImperativeHandle' }
             ]
