@@ -85,7 +85,7 @@ export default defineConfig({
             items: [
               { text: 'useEffect', link: '/hooks/useEffect' },
               { text: 'useLayoutEffect', link: '/hooks/useLayoutEffect' },
-              { text: 'useInsertionEffect', link: '/hooks/useImperativeHandle' }
+              { text: 'useInsertionEffect', link: '/hooks/useInsertionEffect' }
             ]
           },
           {
@@ -107,7 +107,7 @@ export default defineConfig({
             text: '工具Hooks',
             items: [
               { text: 'useDebugValue', link: '/hooks/useDebugValue' },
-              { text: 'useId', link: '/hooks/useDebugValue' }
+              { text: 'useId', link: '/hooks/useId' }
             ]
           },
           {

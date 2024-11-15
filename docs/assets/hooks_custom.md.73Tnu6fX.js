@@ -1,0 +1,1 @@
+import{_ as t,c as e,o}from"./chunks/framework.BmjnFjMf.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/custom.md","filePath":"hooks/custom.md","lastUpdated":null}'),s={name:"hooks/custom.md"};function a(c,r,n,m,d,p){return o(),e("div")}const l=t(s,[["render",a]]);export{i as __pageData,l as default};
