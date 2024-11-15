@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t}from"./chunks/framework.BmjnFjMf.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useMemo.md","filePath":"hooks/useMemo.md","lastUpdated":null}'),s={name:"hooks/useMemo.md"};function a(r,n,c,m,d,p){return t(),o("div")}const l=e(s,[["render",a]]);export{i as __pageData,l as default};

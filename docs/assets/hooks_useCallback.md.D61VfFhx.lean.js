@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t}from"./chunks/framework.BmjnFjMf.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useCallback.md","filePath":"hooks/useCallback.md","lastUpdated":null}'),s={name:"hooks/useCallback.md"};function o(c,l,r,n,d,p){return t(),a("div")}const k=e(s,[["render",o]]);export{i as __pageData,k as default};

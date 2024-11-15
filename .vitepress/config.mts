@@ -106,7 +106,7 @@ export default defineConfig({
           {
             text: '工具Hooks',
             items: [
-              { text: 'useDebugValue', link: '/hooks/useEffect' },
+              { text: 'useDebugValue', link: '/hooks/useDebugValue' },
               { text: 'useId', link: '/hooks/useDebugValue' }
             ]
           },

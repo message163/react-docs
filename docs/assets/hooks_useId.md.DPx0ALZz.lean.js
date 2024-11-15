@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.BmjnFjMf.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hooks/useId.md","filePath":"hooks/useId.md","lastUpdated":null}'),o={name:"hooks/useId.md"};function a(r,d,n,c,p,_){return s(),t("div")}const m=e(o,[["render",a]]);export{l as __pageData,m as default};
