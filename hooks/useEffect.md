@@ -68,7 +68,7 @@ const changeObj = (obj) => {
    return newObj
 }
 console.log(obj,'before') //obj 小满
-let newobj = fn(obj)
+let newobj = changeObj(obj)
 console.log(obj,'after',newobj) //obj 小满 newobj 大满
 ```
 
