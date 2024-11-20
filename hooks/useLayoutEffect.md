@@ -19,7 +19,7 @@ useLayoutEffect(() => {
 - dependencies(可选)：setup中使用到的响应式值列表(props、state等)。必须以数组形式编写如[dep1, dep2]。不传则每次重渲染都执行Effect。
 
 ### 返回值 
-useEffect 返回 `undefined`
+useLayoutEffect 返回 `undefined`
 
 
 
