@@ -1,6 +1,6 @@
 # useLayoutEffect
 
-`useLayoutEffect` 是 React 中的一个 Hook，用于在浏览器完成布局和绘制之后立即执行副作用。与 useEffect 类似。
+`useLayoutEffect` 是 React 中的一个 Hook，用于在浏览器重新绘制屏幕之前触发。与 useEffect 类似。
 
 ## 用法
 
