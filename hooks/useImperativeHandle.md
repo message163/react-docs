@@ -139,9 +139,26 @@ export default App;
 
 1. 如果不传入第三个参数，那么`useImperativeHandle`会在组件挂载时执行一次，然后状态更新时，都会执行一次
 
+```tsx
+useImperativeHandle(ref, () => {
+   
+})
+```
+
 2. 如果传入第三个参数，并且是一个空数组，那么`useImperativeHandle`会在组件挂载时执行一次，然后状态更新时，不会执行
+```tsx
+useImperativeHandle(ref, () => {
+   
+}, [])
+```
 
 3. 如果传入第三个参数，并且有值，那么`useImperativeHandle`会在组件挂载时执行一次，然后会根据依赖项的变化，决定是否重新执行
+```tsx
+const [count, setCount] = useState(0)
+useImperativeHandle(ref, () => {
+   
+}, [count])
+```
 
 ## 实际案例
 
