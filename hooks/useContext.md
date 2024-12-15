@@ -8,7 +8,13 @@ useContext 提供了一个无需为每层组件手动添加 props，就能在组
 
 ```ts
 const MyThemeContext = React.createContext({theme: 'light'}); // 创建一个上下文
-
+function App () {
+   return (
+      <MyThemeContext.Provider value={{theme: 'light'}}>
+         <MyComponent />
+      </MyThemeContext.Provider>
+   )
+}
 function MyComponent() {
     const themeContext = useContext(MyThemeContext); // 使用上下文
     return (<div>{themeContext.theme}</div>);
