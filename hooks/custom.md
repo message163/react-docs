@@ -191,7 +191,7 @@ pnpm add ahooks
 bun add ahooks
 ```
 
-#### 小案例1：useMount 组件挂载完成执行
+#### 小案例1：useMount 组件首次渲染完成执行
 
 ```tsx
 import React from 'react'
