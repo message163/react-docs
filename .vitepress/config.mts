@@ -62,9 +62,9 @@ export default defineConfig({
       {
         text: 'css方案',
         items: [
-          { text: 'css modules', link: '/css/less' },
-          { text: 'css in js', link: '/css/sass' },
-          { text: 'css 原子化', link: '/css/tailwind' }
+          { text: 'css modules', link: '/css/css-modules' },
+          { text: 'css in js', link: '/css/css-in-js' },
+          { text: 'css 原子化', link: '/css/css-atomic' }
         ]
       },
       {
