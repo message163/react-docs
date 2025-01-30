@@ -1,0 +1,1 @@
+import{_ as s,c as t,o as e}from"./chunks/framework.BmjnFjMf.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"css/css-atomic.md","filePath":"css/css-atomic.md","lastUpdated":1738170193000}'),c={name:"css/css-atomic.md"};function a(o,r,n,i,m,d){return e(),t("div")}const f=s(c,[["render",a]]);export{_ as __pageData,f as default};

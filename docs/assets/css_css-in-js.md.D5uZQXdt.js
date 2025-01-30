@@ -1,0 +1,1 @@
+import{_ as s,c as e,o as t}from"./chunks/framework.BmjnFjMf.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"css/css-in-js.md","filePath":"css/css-in-js.md","lastUpdated":1738170193000}'),a={name:"css/css-in-js.md"};function c(n,r,o,i,d,p){return t(),e("div")}const f=s(a,[["render",c]]);export{m as __pageData,f as default};

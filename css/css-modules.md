@@ -50,7 +50,7 @@ export default function Button() {
 export default defineConfig({
   css: {
     modules: {
-      localsConvention: 'dashes', // 修改css modules的类名规则 可以改成驼峰命名 或者 下划线命名
+      localsConvention: 'dashes', // 修改css modules的类名规则 可以改成驼峰命名 或者 xxx-xxx命名等
       generateScopedName: '[name]__[local]___[hash:base64:5]', // 修改css modules的类名规则
     },
   },
@@ -58,6 +58,10 @@ export default defineConfig({
 ```
 
 ### 例子 例如设置为`(localsConvention:camelCaseOnly)`驼峰命名
+
+::: warning
+camelCase 和 camelCaseOnly 区别在于，camelCase 会把非驼峰的命名转为驼峰，并保留之前的类名，而 camelCaseOnly 只会把非驼峰的命名转为驼峰，并删除之前的类名。
+:::
 
 - src/components/Button/index.module.scss
 
@@ -80,7 +84,11 @@ export default function Button() {
   return <button className={styles.buttonRed}>按钮</button>;
 }
 ```
-### 例子 例如设置为`(localsConvention:dashes)`原始命名也就是`-`连接的命名
+### 例子 例如设置为`(localsConvention:dashesOnly)`会将所有-的类名转化为驼峰，并且原始的类名会被删除
+
+::: warning
+dashes 和 dashesOnly 区别在于，dashes 会保留原始的类名，而 dashesOnly 会删除原始的类名。
+:::
 
 - src/components/Button/index.module.scss
 
@@ -93,19 +101,19 @@ export default function Button() {
 - src/components/Button/index.tsx
 
 ::: tip
-设置为原始命名之后，使用的时候需要使用`-`连接的命名，例如`button-red`，而不是`buttonRed`。
+设置为原始命名之后，使用的时候需要使用驼峰命名，例如`buttonRed`，而不是`button-red`。
 :::
 
 ```tsx
 import styles from './index.module.scss';
 
 export default function Button() {
-  return <button className={styles['button-red']}>按钮</button>;
+  return <button className={styles.buttonRed}>按钮</button>;
 }
 ```
 
 ::: info
-如果想同时支持驼峰命名和`-`连接的命名，可以设置为`localsConvention:camelCase`，这样就可以同时支持驼峰命名和`-`连接的命名。
+如果想同时支持驼峰命名和`-`连接的命名，可以设置为`localsConvention:[camelCase|dashes]`，这样就可以同时支持驼峰命名和`-`连接的命名。
 :::
 
 
