@@ -7,52 +7,52 @@ import { ref, computed, onMounted } from 'vue'
 
 const media = [
     {
-        icon: '/react-docs/self-media/icon/1.png',
+        icon: '/self-media/icon/1.png',
         fans: 1170,
         name: '小红书'
     },
     {
-        icon: '/react-docs/self-media/icon/2.png',
+        icon: '/self-media/icon/2.png',
         fans: 58000,
         name: '哔哩哔哩'
     },
     {
-        icon: '/react-docs/self-media/icon/3.png',
+        icon: '/self-media/icon/3.png',
         fans: 23000,
         name: '抖音'
     },
     {
-        icon: '/react-docs/self-media/icon/4.png',
+        icon: '/self-media/icon/4.png',
         fans: 1585,
         name: '视频号'
     },
     {
-        icon: '/react-docs/self-media/icon/5.png',
+        icon: '/self-media/icon/5.png',
         fans: 14300,
         name: '掘金'
     },
     {
-        icon: '/react-docs/self-media/icon/6.png',
-        fans: 1849,
+        icon: '/self-media/icon/6.png',
+        fans: 1850,
         name: '公众号'
     },
     {
-        icon: '/react-docs/self-media/icon/7.png',
+        icon: '/self-media/icon/7.png',
         fans: 21802,
         name: 'CSDN'
     },
     {
-        icon: '/react-docs/self-media/icon/8.png',
+        icon: '/self-media/icon/8.png',
         fans: 1,
         name: '爱奇艺'
     },
     {
-        icon: '/react-docs/self-media/icon/9.png',
+        icon: '/self-media/icon/9.png',
         fans: 36,
         name: '腾讯视频'
     },
     {
-        icon: '/react-docs/self-media/icon/10.png',
+        icon: '/self-media/icon/10.png',
         fans: 79,
         name: '微博'
     }
