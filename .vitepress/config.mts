@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/react-docs/",
   outDir: "./docs",
   description: "this is react docs for xiaoman",
-  head:[
+  head: [
     ['link', { rel: 'icon', href: '/react.ico' }]
   ],
   themeConfig: {
@@ -23,7 +23,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '教程', link: '/basic/introduce' }
+      { text: '教程', link: '/basic/introduce' },
+      { text: '自媒体', link: '/self-media' }
     ],
 
     sidebar: [
@@ -126,10 +127,13 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present xiaoman'
+      copyright: 'Copyright ©2025-present xiaoman'
     }
   },
   markdown: {
     lineNumbers: true
+  },
+  rewrites: {
+    'self-media/index.md': 'self-media.md'
   }
 })

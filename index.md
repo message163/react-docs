@@ -3,7 +3,6 @@
 layout: home
 
 hero:
- 
   name: "react docs"
   text: "this is react docs for xiaoman"
   tagline: "react教程"
@@ -33,5 +32,7 @@ features:
   - title: '免费学习'
     details: 免费分享给热爱编程的小伙伴，让大家可以不用报培训班学习到优质教程
 ---
+
+
 
 
