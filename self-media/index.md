@@ -7,52 +7,52 @@ import { ref, computed, onMounted } from 'vue'
 
 const media = [
     {
-        icon: '/icon/1.png',
+        icon: '/react-docs/icon/1.png',
         fans: 1170,
         name: '小红书'
     },
     {
-        icon: '/icon/2.png',
+        icon: '/react-docs/icon/2.png',
         fans: 58000,
         name: '哔哩哔哩'
     },
     {
-        icon: '/icon/3.png',
+        icon: '/react-docs/icon/3.png',
         fans: 23000,
         name: '抖音'
     },
     {
-        icon: '/icon/4.png',
+        icon: '/react-docs/icon/4.png',
         fans: 1585,
         name: '视频号'
     },
     {
-        icon: '/icon/5.png',
+        icon: '/react-docs/icon/5.png',
         fans: 14300,
         name: '掘金'
     },
     {
-        icon: '/icon/6.png',
-        fans: 1850,
+        icon: '/react-docs/icon/6.png',
+        fans: 1849,
         name: '公众号'
     },
     {
-        icon: '/icon/7.png',
+        icon: '/react-docs/icon/7.png',
         fans: 21802,
         name: 'CSDN'
     },
     {
-        icon: '/icon/8.png',
+        icon: '/react-docs/icon/8.png',
         fans: 1,
         name: '爱奇艺'
     },
     {
-        icon: '/icon/9.png',
+        icon: '/react-docs/icon/9.png',
         fans: 36,
         name: '腾讯视频'
     },
     {
-        icon: '/icon/10.png',
+        icon: '/react-docs/icon/10.png',
         fans: 79,
         name: '微博'
     }
