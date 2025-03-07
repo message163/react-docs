@@ -173,3 +173,7 @@ export const Modal = () => {
 ```
 
 这样的话，Modal 组件就稳定了，无论外层是否有 position: relative 的样式，Modal 组件都会相对于 body 进行定位。
+
+## 小满箴言
+
+我更推荐使用`createPortal`因为他更灵活，可以挂载到任意位置，而`position: fixed`,会有很多问题，在默认的情况下他是根据浏览器视口进行定位的，但是如果父级设置了`transform、perspective、filter 或 backdrop-filter` 属性非 none 时，他就会相对于父级进行定位，这样就会导致Modal组件定位不准确`(他不是一定按照浏览器视口进行定位)`，所以不推荐使用。
