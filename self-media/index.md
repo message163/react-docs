@@ -23,22 +23,22 @@ const media = [
     },
     {
         icon: '/react-docs/icon/4.png',
-        fans: 1609,
+        fans: 1610,
         name: '视频号'
     },
     {
         icon: '/react-docs/icon/5.png',
-        fans: 14542,
+        fans: 14576,
         name: '掘金'
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 1953,
+        fans: 2014,
         name: '公众号'
     },
     {
         icon: '/react-docs/icon/7.png',
-        fans: 21933,
+        fans: 21968,
         name: 'CSDN'
     },
     {
