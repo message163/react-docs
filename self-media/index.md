@@ -28,17 +28,17 @@ const media = [
     },
     {
         icon: '/react-docs/icon/5.png',
-        fans: 14576,
+        fans: 14606,
         name: '掘金'
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 2014,
+        fans: 2022,
         name: '公众号'
     },
     {
         icon: '/react-docs/icon/7.png',
-        fans: 21968,
+        fans: 22000,
         name: 'CSDN'
     },
     {
