@@ -33,7 +33,7 @@ const media = [
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 2022,
+        fans: 2028,
         name: '公众号'
     },
     {

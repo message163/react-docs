@@ -57,7 +57,8 @@ export default defineConfig({
           { text: '组件通信', link: '/components/communication' },
           { text: '受控组件', link: '/components/controlled' },
           { text: '传送组件', link: '/components/createPortal' },
-          { text: '异步组件', link: '/components/suspense' }
+          { text: '异步组件', link: '/components/suspense' },
+          { text: '组件实战', link: '/components/practice' }
         ]
       },
       {
