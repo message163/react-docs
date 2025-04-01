@@ -27,11 +27,43 @@ npm run dev # 启动项目
 npm i react-router #V7不在需要 react-router-dom
 ```
 
+```ts
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: Home,
+  },
+  {
+    path: '/about',
+    Component: About,
+  },
+]);
+```
+
 - 声明模式
-声明模式同上，也可以用自己的模板创建`React`项目，然后自己安装`React-router`。
+
+声明模式，也可以用自己的模板创建`React`项目，然后自己安装`React-router`。
 
 ```bash
 npm i react-router #V7不在需要 react-router-dom
+```
+
+```tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+import App from "./app";
+import About from '../about'
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="about" element={<About />} />
+    </Routes>
+  </BrowserRouter>
+);
 ```
 
 ::: tip
