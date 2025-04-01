@@ -119,6 +119,12 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: 'Router',
+        items: [
+          { text: '安装', link: '/router/index' }
+        ]
       }
     ],
 
