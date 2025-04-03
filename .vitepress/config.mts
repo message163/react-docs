@@ -123,7 +123,34 @@ export default defineConfig({
       {
         text: 'Router',
         items: [
-          { text: '安装', link: '/router/index' }
+          {
+            text: '基本使用',
+            items: [
+              { text: '安装', link: '/router/index' },
+              { text: '模式', link: '/router/mode' },
+              { text: '路由', link: '/router/router' },
+              { text: '路由对象', link: '/router/meta' },
+              { text: '操作', link: '/router/operation' },
+              { text: '导航', link: '/router/navigation' },
+            ]
+          },
+          {
+            text:'API',
+            items:[
+              { text: 'Await', link: '/router/useRoute' },
+              { text: 'Link', link: '/router/useRouter' },
+              { text: 'Meta', link: '/router/useNavigate' },
+              { text: 'NavLink', link: '/router/useParams' },
+              { text: 'ScrollRestoration ', link: '/router/useSearchParams' },
+            ]
+          },
+          {
+            text:'hooks',
+            items:[
+              { text: 'useNavigate', link: '/router/useRoute' },
+              { text: 'useParams', link: '/router/useRouter' },
+            ]
+          }
         ]
       }
     ],
