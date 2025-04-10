@@ -126,7 +126,7 @@ export default defineConfig({
           {
             text: '基本使用',
             items: [
-              { text: '安装', link: '/router/index' },
+              { text: '安装', link: '/router/install' },
               { text: '模式', link: '/router/mode' },
               { text: '路由', link: '/router/router' },
               { text: '路由对象', link: '/router/meta' },
