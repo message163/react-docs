@@ -84,6 +84,7 @@ export default function Content() {
 - 父路由的path 是 `index`开始，所以访问子路由的时候需要加上父路由的path例如 `/index/home` `/index/about`
 - 子路由不需要增加`/`了直接写子路由的path即可
 - 子路由默认是不显示的，需要父路由通过 `Outlet` 组件来显示子路由 outlet 就是类似于Vue的`<router-view>`展示子路由的一个容器
+- 子路由的层级可以无限嵌套，但是要注意的是，一般实际工作中就是2-3层
 
 ```tsx
 const router = createBrowserRouter([
