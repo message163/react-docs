@@ -8,6 +8,7 @@ React-Router V7 的路由种类是非常多的，有`嵌套路由` `布局路由
 
  ```bash
 npm install antd
+npm install @ant-design/icons
  ```
 
  我们创建一个`layout`文件夹，在文件夹中创建一个`Content` `Header` `Menu` 文件夹，在文件夹中创建一个`index.tsx`文件，文件内容如下：
