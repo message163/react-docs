@@ -130,7 +130,7 @@ export default defineConfig({
               { text: '模式', link: '/router/mode' },
               { text: '路由', link: '/router/router' },
               { text: '传参', link: '/router/params' },
-              { text: '路由对象', link: '/router/meta' },
+              { text: '懒加载', link: '/router/lazy' },
               { text: '操作', link: '/router/operation' },
               { text: '导航', link: '/router/navigation' },
             ]
@@ -148,12 +148,13 @@ export default defineConfig({
           {
             text:'Hooks',
             items:[
-              { text: 'useNavigate', link: '/router/useRoute' },
-              { text: 'useNavigation', link: '/router/useNavigation' },
+              { text: 'useNavigate', link: '/router/hooks/useNavigate' },
+              { text: 'useNavigation', link: '/router/hooks/useNavigation' },
               { text: 'useParams', link: '/router/hooks/useParams' },
               { text: 'useSearchParams', link: '/router/hooks/useSearchParams' },
               { text: 'useLocation', link: '/router/hooks/useLocation' },
               { text: 'useLoaderData', link: '/router/hooks/useLoaderData' },
+              { text: 'useActionData', link: '/router/hooks/useActionData' },
               { text: 'useSubmit', link: '/router/hooks/useSubmit' },
             ]
           }
