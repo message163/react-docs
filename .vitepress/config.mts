@@ -132,17 +132,19 @@ export default defineConfig({
               { text: '传参', link: '/router/params' },
               { text: '懒加载', link: '/router/lazy' },
               { text: '操作', link: '/router/operation' },
-              { text: '导航', link: '/router/navigation' },
+              { text: '导航', link: '/router/nav' },
+              { text: '边界处理', link: '/router/boundary' },
             ]
           },
           {
             text:'API',
             items:[
-              { text: 'Await', link: '/router/useRoute' },
-              { text: 'Link', link: '/router/useRouter' },
-              { text: 'Meta', link: '/router/useNavigate' },
-              { text: 'NavLink', link: '/router/useParams' },
-              { text: 'ScrollRestoration ', link: '/router/useSearchParams' },
+              { text: 'Await', link: '/router/apis/await' },
+              { text: 'Link', link: '/router/apis/link' },
+              { text: 'Meta', link: '/router/apis/meta' },
+              { text: 'NavLink', link: '/router/apis/navLink' },
+              { text: 'redirect', link: '/router/apis/redirect' },
+              { text: 'ScrollRestoration ', link: '/router/apis/scrollRestoration' },
             ]
           },
           {
