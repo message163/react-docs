@@ -1,6 +1,6 @@
 # 导航
 
-在React-router中，大致有四种导航方式：
+在React-router V7中，大致有四种导航方式：
 
 1. 使用`Link`组件 [link](./apis/link)
 2. 使用`NavLink`组件 [navlink](./apis/navlink)

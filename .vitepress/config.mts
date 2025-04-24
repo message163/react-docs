@@ -142,7 +142,7 @@ export default defineConfig({
               { text: 'Await', link: '/router/apis/await' },
               { text: 'Link', link: '/router/apis/link' },
               { text: 'Meta', link: '/router/apis/meta' },
-              { text: 'NavLink', link: '/router/apis/navLink' },
+              { text: 'NavLink', link: '/router/apis/navlink' },
               { text: 'redirect', link: '/router/apis/redirect' },
               { text: 'ScrollRestoration ', link: '/router/apis/scrollRestoration' },
             ]
