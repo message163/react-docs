@@ -7,7 +7,11 @@
 3. 使用编程式导航`useNavigate` [usenavigate](./hooks/useNavigate)
 4. 使用`redirect`重定向 [redirect](./apis/redirect)
 
-## 使用Link组件
+
+:::tip
+此页面为导航方式链接合集，具体使用方法请查看对应链接。
+:::
+
 
 
 

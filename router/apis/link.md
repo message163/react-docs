@@ -23,7 +23,7 @@ export default function App() {
 - `reloadDocument`：是否重新加载页面
 - `preventScrollReset`：是否阻止滚动位置重置
 - `replace`：是否替换当前路径
-
+- `viewTransition`：是否启用视图过渡
 
 ### to
 
@@ -60,10 +60,19 @@ export default function App() {
 
 ### relative
 
-`relative` 属性是一个字符串，表示相对于当前路径的导航方式。
+`relative` 属性是一个字符串，表示相对于当前路径的导航方式，默认的方式是绝对路径，如果想要使用相对路径，可以设置为`path`。
 
 ```tsx
-<Link relative="path" to="/about">About</Link>
+//默认是绝对路径
+<Link relative="route" to="/about">About</Link>
+
+//使用相对路径
+<Link relative="path" to="../about">About</Link>
+
+//例如当前的路由是/index/home，那么使用绝对路径导航到/about，会变成/about
+<Link to="/about">About</Link>
+//可以使用相对路径导航到/index/about
+<Link relative="path" to="../about">About</Link>
 ```
 
 ### reloadDocument
@@ -82,5 +91,14 @@ export default function App() {
 <Link preventScrollReset to="/about">About</Link>
 ```
 
+![如图](../image/scroll.gif)
 
+
+### viewTransition
+
+`viewTransition` 属性是一个布尔值，表示是否启用视图过渡，自动增加页面跳转的动画效果。
+
+```tsx
+<Link viewTransition to="/about">About</Link>
+```
 
