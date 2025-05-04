@@ -22,7 +22,6 @@ export default function App() {
 - `relative`：相对于当前路径的导航方式
 - `reloadDocument`：是否重新加载页面
 - `preventScrollReset`：是否阻止滚动位置重置
-- `replace`：是否替换当前路径
 - `viewTransition`：是否启用视图过渡
 
 
