@@ -157,6 +157,7 @@ export default defineConfig({
               { text: 'useLocation', link: '/router/hooks/useLocation' },
               { text: 'useLoaderData', link: '/router/hooks/useLoaderData' },
               { text: 'useActionData', link: '/router/hooks/useActionData' },
+              { text: 'useRouteError', link: '/router/hooks/useRouteError' },
               { text: 'useSubmit', link: '/router/hooks/useSubmit' },
             ]
           }
