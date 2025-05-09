@@ -8,7 +8,7 @@ import { ref, computed, onMounted } from 'vue'
 const media = [
     {
         icon: '/react-docs/icon/1.png',
-        fans: 1249,
+        fans: 1254,
         name: '小红书'
     },
     {
@@ -18,38 +18,38 @@ const media = [
     },
     {
         icon: '/react-docs/icon/3.png',
-        fans: 23000,
+        fans: 24000,
         name: '抖音'
     },
     {
         icon: '/react-docs/icon/4.png',
-        fans: 1671,
+        fans: 1703,
         name: '视频号'
     },
     {
         icon: '/react-docs/icon/5.png',
-        fans: 14853,
+        fans: 14940,
         name: '掘金'
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 2164,
+        fans: 2235,
         name: '公众号'
     },
     {
         icon: '/react-docs/icon/7.png',
-        fans: 22198,
+        fans: 22272,
         name: 'CSDN'
     },
     {
         icon: '/react-docs/icon/8.png',
-        fans: 1,
-        name: '爱奇艺'
+        fans: 1766,
+        name: 'QQ'
     },
     {
         icon: '/react-docs/icon/9.png',
-        fans: 36,
-        name: '腾讯视频'
+        fans: 7002,
+        name: '微信'
     },
     {
         icon: '/react-docs/icon/10.png',
@@ -87,9 +87,9 @@ const formattedDate = `${currentDate.getFullYear()}年${currentDate.getMonth() +
       <div class="media-icon">
         <img :src="item.icon" :alt="item.name">
       </div>
-      <div class="media-name">{{item.name}}</div>
+      <div class="media-name"></div>
       <div class="media-fans">{{formatFans(item.fans)}}</div>
-      <div class="media-label">粉丝</div>
+      <div class="media-label">{{item.name}}</div>
     </div>
   </div>
 </div>
