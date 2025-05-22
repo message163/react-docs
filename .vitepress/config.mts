@@ -167,6 +167,7 @@ export default defineConfig({
         text: 'Zustand',
         items: [
           { text: '安装', link: '/zustand/install' },
+          { text: '状态处理', link: '/zustand/state' },
         ]
       }
     ],
