@@ -8,7 +8,7 @@ import { ref, computed, onMounted } from 'vue'
 const media = [
     {
         icon: '/react-docs/icon/1.png',
-        fans: 1343,
+        fans: 1350,
         name: '小红书'
     },
     {
@@ -23,22 +23,22 @@ const media = [
     },
     {
         icon: '/react-docs/icon/4.png',
-        fans: 1800,
+        fans: 1810,
         name: '视频号'
     },
     {
         icon: '/react-docs/icon/5.png',
-        fans: 15016,
+        fans: 15053,
         name: '掘金'
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 2313,
+        fans: 2320,
         name: '公众号'
     },
     {
         icon: '/react-docs/icon/7.png',
-        fans: 22347,
+        fans: 22376,
         name: 'CSDN'
     },
     {
