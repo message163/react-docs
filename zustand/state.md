@@ -1,10 +1,15 @@
 # 状态处理
 
-在上一章我们讲了，Zustand会合并第一层的state，但是如果深层次应该如何处理呢
+## 目录
+- [深层次状态处理](#深层次状态处理)
+- [使用 immer 中间件](#使用-immer-中间件)
+- [immer 原理剖析](#immer-原理剖析)
 
-## 来吧演示
+## 深层次状态处理
 
-首先创建一个葫芦娃，葫芦娃有七个娃，每个娃都有自己的状态，我们可以通过updateGourd来更新葫芦娃的状态，这样就实现了一个深层次的demo
+在上一章我们讲了，Zustand 会合并第一层的 state，但是对于深层次的状态更新，我们需要特别注意。让我们通过一个葫芦娃的例子来演示。
+
+### 基础实现
 
 ```ts
 import { create } from 'zustand'
@@ -21,8 +26,10 @@ interface User {
     },
     updateGourd: () => void
 }
+
+// 创建 store
 const useUserStore = create<User>(((set) => ({
-    //创建葫芦娃
+    // 初始化葫芦娃状态
     gourd: {
         oneChild: '大娃',
         twoChild: '二娃',
@@ -32,9 +39,10 @@ const useUserStore = create<User>(((set) => ({
         sixChild: '六娃',
         sevenChild: '七娃',
     },
+    // 更新方法
     updateGourd: () => set((state) => ({
         gourd: {
-            //...state.gourd, 先不进行状态合并  // [!code highlight] 
+            // ...state.gourd,  // 需要手动合并状态
             oneChild: '大娃-超进化',
         }
     }))
@@ -43,23 +51,18 @@ const useUserStore = create<User>(((set) => ({
 export default useUserStore;
 ```
 
-我们会发现如果不进行状态合并，其他的状态是会丢失的，所以深层次的状态处理需要进行状态合并，但是如果代码过多，每次都需要合并状态也挺烦的，所以我们可以通过`immer`中间件处理这个问题
+> 注意：如果不进行状态合并，其他状态会丢失。每次更新都需要手动合并状态，这在实际开发中会变得很繁琐。
 
-![state](./images/state.gif)
+![状态更新演示](./images/state.gif)
 
+## 使用 immer 中间件
 
-## 使用immer中间件
-
-安装
-
+### 安装
 ```bash
 npm install immer
 ```
 
-**原始`immer`的用法**
-
-需要导出produce，然后它的第一个参数是原始值，第二个参数是一个回调函数，回调函数中的参数是draft，也就是原始值的拷贝，然后我们就可以直接修改draft了，最后返回新的值
-
+### 基础用法
 ```ts
 import { produce } from 'immer'
 
@@ -70,47 +73,24 @@ const data = {
   }
 }
 
+// 使用 produce 创建新状态
 const newData = produce(data, draft => {
-  draft.user.age = 20
+  draft.user.age = 20  // 直接修改 draft
 })
 
-console.log(newData,data) 
-//{ user: { name: '张三', age: 20 } } 
-//{ user: { name: '张三', age: 18 } }
+console.log(newData, data) 
+// 输出:
+// { user: { name: '张三', age: 20 } } 
+// { user: { name: '张三', age: 18 } }
 ```
 
-<hr />
-
-**`immer`在`Zustand`中的使用方法**
-
-引入注意是从`zustand/middleware/immer`引入，而不是`immer`
-
+### 在 Zustand 中使用
 ```ts
 import { create } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
-```
 
-1. 首先从zustand中间件引入`immer`
-2. 然后注意结构`create()(immer())`这里是两个括号而不是放在create里面了
-
-```ts
-import { create } from 'zustand'
-import { immer } from 'zustand/middleware/immer'
-interface User {
-    gourd: {
-        oneChild: string,
-        twoChild: string,
-        threeChild: string,
-        fourChild: string,
-        fiveChild: string,
-        sixChild: string,
-        sevenChild: string,
-    },
-    updateGourd: () => void
-}
-//注意结构发生了变化！！！
+// 注意：使用 immer 中间件时的特殊结构
 const useUserStore = create<User>()(immer(((set) => ({
-    //创建葫芦娃
     gourd: {
         oneChild: '大娃',
         twoChild: '二娃',
@@ -121,91 +101,104 @@ const useUserStore = create<User>()(immer(((set) => ({
         sevenChild: '七娃',
     },
     updateGourd: () => set((state) => {
-        state.gourd.oneChild = '大娃-超进化' //这儿不需要状态合并了需要修改什么值直接改就行了
+        // 直接修改状态，无需手动合并
+        state.gourd.oneChild = '大娃-超进化'
         state.gourd.twoChild = '二娃-谁来了'
         state.gourd.threeChild = '三娃-我来了'
     })
 }))))
-
-export default useUserStore;
 ```
 
+## immer 原理剖析
 
+immer.js 通过 Proxy 代理对象的所有操作，实现不可变数据的更新。当对数据进行修改时，immer 会创建一个被修改对象的副本，并在副本上进行修改，最后返回修改后的新对象，而原始对象保持不变。这种机制确保了数据的不可变性，同时提供了直观的修改方式。
 
-## immer原理剖析
+immer 的核心原理基于以下两个概念：
 
-为什么使用了immer中间件就可以直接修改状态了？
+1. 写时复制 (Copy-on-Write)
+   - 无修改时：直接返回原对象
+   - 有修改时：创建新对象
 
-原始数据 → 创建代理 → 修改触发复制 → 生成新结构
+2. 惰性代理 (Lazy Proxy)
+   - 按需创建代理
+   - 通过 Proxy 拦截操作
+   - 延迟代理创建
 
+### 工作流程
+```mermaid
+graph TD
+A[调用 produce] --> B[创建代理 draft]
+B --> C[执行 recipe 修改 draft]
+C --> D{是否有修改？}
+D -- 是 --> E[创建新对象：...base + ...modified]
+D -- 否 --> F[直接返回 base]
+```
+
+### 简化实现
 ```ts
-const data = {
+type Draft<T> = {
+  -readonly [P in keyof T]: T[P];
+};
+
+function produce<T>(base: T, recipe: (draft: Draft<T>) => void): T {
+  // 用于存储修改过的对象
+  const modified: Record<string, any> = {};
+  
+  const handler = {
+    get(target: any, prop: string) {
+      // 如果这个对象已经被修改过，返回修改后的对象
+      if (prop in modified) {
+        return modified[prop];
+      }
+      
+      // 如果访问的是对象，则递归创建代理
+      if (typeof target[prop] === 'object' && target[prop] !== null) {
+        return new Proxy(target[prop], handler);
+      }
+      return target[prop];
+    },
+    set(target: any, prop: string, value: any) {
+      // 记录修改
+      modified[prop] = value;
+      return true;
+    }
+  };
+
+  // 创建代理对象
+  const proxy = new Proxy(base, handler);
+  
+  // 执行修改函数
+  recipe(proxy);
+  
+  // 如果没有修改，直接返回原对象
+  if (Object.keys(modified).length === 0) {
+    return base;
+  }
+  
+  // 创建新对象，只复制修改过的属性
+  return {
+    ...base,
+    ...modified
+  };
+}
+
+// 使用示例
+const state = {
   user: {
     name: '张三',
-    age: 18
+    age: 25
   }
-}
+};
 
-const produce = (base, recipe) => {
-  const proxies = new WeakMap() // 存储原始对象与代理的映射
-  let rootChanged = false       // 是否发生修改
-  let rootCopy = null           // 根对象副本
-  // 创建代理递归函数
-  function createProxy(parent, obj) {
-    if (typeof obj !== 'object' || obj === null) return obj
-    
-    // 已代理过直接返回
-    if (proxies.has(obj)) return proxies.get(obj)
-    // 创建代理
-    const proxy = new Proxy({}, {
-      get(_, key) {
-        // 优先返回副本值
-        if (parent?.copy) {
-          //如果父级有副本，则返回副本的代理
-          return createProxy(parent, parent.copy[key])
-        }
-        
-        // 未修改时创建惰性代理
-        if (!proxies.has(obj[key])) { 
-          // 创建代理
-          proxies.set(obj[key], createProxy({ base: obj, copy: null }, obj[key]))
-        }
-        // 返回代理
-        return proxies.get(obj[key])
-      },
-      set(_, key, value) {
-        // 首次修改时创建副本
-        if (!parent.copy) {
-          parent.copy = { ...parent.base } // 创建副本
-          rootCopy = parent.copy // 记录根副本
-          rootChanged = true // 标记根对象已修改
-        }
-        // 更新副本
-        parent.copy[key] = value
-        return true
-      }
-    })
+const newState = produce(state, draft => {
+  draft.user.name = '李四';
+  draft.user.age = 26;
+});
 
-    proxies.set(obj, proxy)
-    return proxy
-  }
-
-  // 创建根代理
-  const draft = createProxy({ base }, base)
-  
-  // 执行修改
-  recipe(draft)
-  
-  // 返回结果
-  return rootChanged ? rootCopy : base
-}
-
-const proxy = produce(data, (proxy) => {
-  proxy.user.name = '李四'
-  proxy.user.age = 20
-})
-
-console.log(proxy, data)
-//{ user: { name: '李四', age: 20 } }
-//{ user: { name: '张三', age: 18 } }
+console.log(state);     // { user: { name: '张三', age: 25 } }
+console.log(newState);  // { user: { name: '李四', age: 26 } }
 ```
+
+:::tip
+注意：这是一个简化实现，没有考虑数组的情况和深层次的代理，只实现了其核心思想。
+:::

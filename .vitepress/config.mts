@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: "react docs",
   base: "/react-docs/",
   outDir: "./docs",
@@ -182,9 +183,13 @@ export default defineConfig({
     }
   },
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark'
+    }
   },
   rewrites: {
     'self-media/index.md': 'self-media.md'
   }
-})
+}))
