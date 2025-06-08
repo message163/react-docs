@@ -176,10 +176,7 @@ function produce<T>(base: T, recipe: (draft: Draft<T>) => void): T {
   }
   
   // 创建新对象，只复制修改过的属性
-  return {
-    ...base,
-    ...modified
-  };
+  return JSON.parse(JSON.stringify(proxy))
 }
 
 // 使用示例
