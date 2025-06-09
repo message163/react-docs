@@ -169,6 +169,7 @@ export default withMermaid(defineConfig({
         items: [
           { text: '安装', link: '/zustand/install' },
           { text: '状态处理', link: '/zustand/state' },
+          { text: '状态简化', link: '/zustand/simplify' },
         ]
       }
     ],
