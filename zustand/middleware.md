@@ -67,6 +67,7 @@ devtools 是 zustand 提供的一个用于调试的工具，它可以帮助我�
 ![图片](./images/redux.jpg)
 
 ```ts
+import { devtools } from 'zustand/middleware'
 const useUserStore = create<User>()(
     immer(
         devtools((set) => ({
@@ -102,6 +103,7 @@ persist 是 zustand 提供的一个用于持久化状态的工具，它可以帮
 
 
 ```ts
+import { persist } from 'zustand/middleware'
 const useUserStore = create<User>()(
     immer(
         persist((set) => ({
