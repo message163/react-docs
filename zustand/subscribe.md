@@ -56,6 +56,7 @@ return <div>{status}</div>
 持续优化，目前的订阅只要是store内部任意的state发生变化，都会触发回调函数，我们希望只订阅age的变化，可以使用中间件`subscribeWithSelector` 订阅单个状态。
 
 ```tsx
+import { subscribeWithSelector } from 'zustand/middleware'
 const store = create(subscribeWithSelector((set) => ({
   age: 0,
   name: '张三',
