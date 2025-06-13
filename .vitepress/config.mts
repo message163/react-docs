@@ -171,6 +171,7 @@ export default withMermaid(defineConfig({
           { text: '状态处理', link: '/zustand/state' },
           { text: '状态简化', link: '/zustand/simplify' },
           { text: '中间件', link: '/zustand/middleware' },
+          { text: '订阅', link: '/zustand/subscribe' },
         ]
       }
     ],
