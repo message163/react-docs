@@ -121,7 +121,7 @@ export const Modal = () => {
 
 基本的html + css 比较简单就不多说了，先看一下效果
 
-![alt text](./images/modal.png)
+![alt text](./images/mod.png)
 
 
 如果外层有position: relative 的样式，那么弹框会相对于外层进行定位，如果外层没有position: relative 的样式，那么弹框会相对于body进行定位,故此这个Modal不稳定，所以需要使用createPortal来将Modal挂载到body上，或者直接将定位改成position: fixed,两种方案。
