@@ -8,12 +8,12 @@ import { ref, computed, onMounted } from 'vue'
 const media = [
     {
         icon: '/react-docs/icon/1.png',
-        fans: 1371,
+        fans: 1385,
         name: '小红书'
     },
     {
         icon: '/react-docs/icon/2.png',
-        fans: 59057,
+        fans: 59165,
         name: '哔哩哔哩'
     },
     {
@@ -23,22 +23,22 @@ const media = [
     },
     {
         icon: '/react-docs/icon/4.png',
-        fans: 1853,
+        fans: 1907,
         name: '视频号'
     },
     {
         icon: '/react-docs/icon/5.png',
-        fans: 15101,
+        fans: 15167,
         name: '掘金'
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 2320,
+        fans: 2343,
         name: '公众号'
     },
     {
         icon: '/react-docs/icon/7.png',
-        fans: 22409,
+        fans: 22469,
         name: 'CSDN'
     },
     {
@@ -48,7 +48,7 @@ const media = [
     },
     {
         icon: '/react-docs/icon/9.png',
-        fans: 7132,
+        fans: 7163,
         name: '微信'
     },
     {
