@@ -59,7 +59,8 @@ export default withMermaid(defineConfig({
           { text: '受控组件', link: '/components/controlled' },
           { text: '传送组件', link: '/components/createPortal' },
           { text: '异步组件', link: '/components/suspense' },
-          { text: '组件实战', link: '/components/practice' }
+          { text: '组件实战', link: '/components/practice' },
+          { text: '高阶组件', link: '/components/hoc' }
         ]
       },
       {
