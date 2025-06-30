@@ -23,7 +23,7 @@ const media = [
     },
     {
         icon: '/react-docs/icon/4.png',
-        fans: 2260,
+        fans: 2501,
         name: '视频号'
     },
     {
@@ -33,12 +33,12 @@ const media = [
     },
     {
         icon: '/react-docs/icon/6.png',
-        fans: 2400,
+        fans: 2404,
         name: '公众号'
     },
     {
         icon: '/react-docs/icon/7.png',
-        fans: 22516,
+        fans: 22523,
         name: 'CSDN'
     },
     {
@@ -48,12 +48,12 @@ const media = [
     },
     {
         icon: '/react-docs/icon/9.png',
-        fans: 7277,
+        fans: 7280,
         name: '微信'
     },
     {
         icon: '/react-docs/icon/10.png',
-        fans: 91,
+        fans: 90,
         name: '微博'
     }
 ]
