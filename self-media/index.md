@@ -58,16 +58,7 @@ const media = [
     }
 ]
 
-const honors = [
-    '2024年掘金年度总冠军',
-    '2023年掘金年度总冠军', 
-    '2022年年度第六名',
-    '京东黑客马拉松亚军',
-    '阿里云专家博主',
-    'CSDN认证博主',
-    '公益免费课程',
-    'Node.js全解作者-清华大学出版社合作'
-]
+
 
 const totalFans = computed(() => {
   return media.reduce((sum, item) => sum + item.fans, 0)
@@ -93,14 +84,6 @@ const formattedDate = `${currentDate.getFullYear()}年${currentDate.getMonth() +
     </div>
   </div>
   
-  <div class="honors-section">
-    <h2>荣誉奖项</h2>
-    <div class="honors-grid">
-      <div v-for="(honor, index) in honors" :key="index" class="honor-item">
-        <span class="honor-text">{{honor}}</span>
-      </div>
-    </div>
-  </div>
   
   <div class="media-grid">
     <div v-for="(item, index) in media" :key="index" class="media-card">
