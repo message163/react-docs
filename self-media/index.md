@@ -58,6 +58,17 @@ const media = [
     }
 ]
 
+const honors = [
+    '2024年掘金年度总冠军',
+    '2023年掘金年度总冠军', 
+    '2022年年度第六名',
+    '京东黑客马拉松亚军',
+    '阿里云专家博主',
+    'CSDN认证博主',
+    '公益免费课程',
+    'Node.js全解作者-清华大学出版社合作'
+]
+
 const totalFans = computed(() => {
   return media.reduce((sum, item) => sum + item.fans, 0)
 })
@@ -79,6 +90,15 @@ const formattedDate = `${currentDate.getFullYear()}年${currentDate.getMonth() +
     <p>截止{{formattedDate}}粉丝数据统计</p>
     <div class="total-fans">
       <span>总粉丝数: {{formatFans(totalFans)}}</span>
+    </div>
+  </div>
+  
+  <div class="honors-section">
+    <h2>荣誉奖项</h2>
+    <div class="honors-grid">
+      <div v-for="(honor, index) in honors" :key="index" class="honor-item">
+        <span class="honor-text">{{honor}}</span>
+      </div>
     </div>
   </div>
   
@@ -127,6 +147,40 @@ const formattedDate = `${currentDate.getFullYear()}年${currentDate.getMonth() +
   display: inline-block;
   margin-top: 10px;
   font-size: 16px;
+}
+
+.honors-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.honors-section h2 {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.honor-item {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.honor-text {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .media-grid {
