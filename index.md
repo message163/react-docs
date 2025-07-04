@@ -8,8 +8,8 @@ hero:
   tagline: "react教程"
   actions:
     - theme: brand
-      text: Fast learning
-      link: /basic/introduce
+      text: 开始React
+      link: /react/basic/introduce
     - theme: alt
       text: 哔哩哔哩视频教程
       link: https://space.bilibili.com/99210573?spm_id_from=333.1007.0.0
