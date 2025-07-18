@@ -81,6 +81,7 @@ export default withMermaid(defineConfig({
               items: [
                 { text: 'useState', link: '/react/hooks/useState' },
                 { text: 'useReducer', link: '/react/hooks/useReducer' },
+                { text: 'useImmer', link: '/react/hooks/useImmer' },
                 { text: 'useSyncExternalStore', link: '/react/hooks/useSyncExternalStore' },
                 { text: 'useTransition', link: '/react/hooks/useTransition' },
                 { text: 'useDeferredValue', link: '/react/hooks/useDeferredValue' }
