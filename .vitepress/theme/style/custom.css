@@ -1,0 +1,70 @@
+.thanks-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    margin: 24px 0 36px 0;
+    justify-content: flex-start;
+    background: url(./images/bg.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 92px 18px;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+    border: 1.5px solid rgba(183, 134, 40, 0.18);
+  }
+  
+  .thanks-tags span {
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+    background: rgba(30, 30, 30, 0.68); /* 半透明黑色磨砂 */
+    backdrop-filter: blur(2.5px);
+    color: #ffe066;
+    border-radius: 22px;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 12px 0 rgba(255, 215, 0, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.18);
+    margin-bottom: 2px;
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid rgba(255, 215, 0, 0.55);
+    transition: 
+      transform 0.22s cubic-bezier(.4,2,.6,1),
+      box-shadow 0.22s,
+      border-color 0.22s,
+      color 0.22s,
+      background 0.22s;
+    cursor: pointer;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0.5px 0.5px #b78628;
+  }
+  
+  .thanks-tags span::before {
+    content: '';
+    position: absolute;
+    left: -30%;
+    top: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(255,215,0,0.10) 0%, rgba(35,37,38,0) 80%);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .thanks-tags span:hover {
+    transform: scale(1.13) rotate(-2deg);
+    box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.22), 0 3px 12px 0 rgba(255, 80, 120, 0.10);
+    filter: brightness(1.12) saturate(1.18);
+    z-index: 2;
+    color: #fffbe6;
+    border-color: #ffd700;
+    background: rgba(40, 40, 40, 0.82);
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%;}
+    50% { background-position: 100% 50%;}
+    100% { background-position: 0% 50%;}
+  }

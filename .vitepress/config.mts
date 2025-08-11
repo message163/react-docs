@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
-
 // https://vitepress.dev/reference/site-config
 export default withMermaid(defineConfig({
   title: "react docs",
@@ -25,7 +24,7 @@ export default withMermaid(defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'React', link: '/react/basic/introduce' },
-      { text: 'React Native', link: '/react-native/introduce/a' },
+      { text: 'React Native', link: '/react-native/basic/introduce' },
       { text: '自媒体', link: '/self-media' }
     ],
 
@@ -181,16 +180,58 @@ export default withMermaid(defineConfig({
       ],
       '/react-native/': [
         {
-          text: 'React Native',
-          items: [
-            { text: '介绍', link: '/react-native/introduce/a' },
-            { text: '环境搭建', link: '/react-native/setup/index' },
-            { text: '基础组件', link: '/react-native/components/index' },
-            { text: '导航', link: '/react-native/navigation/index' },
-            { text: '状态管理', link: '/react-native/state-management/index' },
-            { text: '网络请求', link: '/react-native/networking/index' },
-            { text: '原生模块', link: '/react-native/native-modules/index' },
-            { text: '发布部署', link: '/react-native/deployment/index' }
+           text:'入门',
+           items:[
+            { text: '简介', link: '/react-native/basic/introduce' },
+            { text: '环境搭建', 
+              items:[
+                { text: 'Android环境搭建', link: '/react-native/basic/env-android' },
+                { text: 'iOS环境搭建', link: '/react-native/basic/env-ios' },
+              ]
+            },
+            { text: '目录结构', link: '/react-native/basic/structure' },
+           ]
+        },
+        {
+           text:'原理',
+           items:[
+            { text: '架构', link: '/react-native/principle/architecture' },
+            { text: '渲染', link: '/react-native/principle/render' },
+            { text: '通讯', link: '/react-native/principle/communication' },
+           ]
+        },
+        {
+           text:'界面和交互',
+           items:[
+            { text: '样式', link: '/react-native/ui/style' },
+            { text: '布局', link: '/react-native/ui/layout' },
+            { text: '图片', link: '/react-native/ui/image' },
+            { text: '事件', link: '/react-native/ui/event' },
+            { text: '动画', link: '/react-native/ui/animate' },
+            { text: '网络', link: '/react-native/ui/network' },
+           ]
+        },
+        {
+          text:'组件',
+          items:[
+            { text: 'button', link: '/react-native/components/button' },
+            { text: 'text', link: '/react-native/components/text' },
+            { text: 'image', link: '/react-native/components/image' },
+            { text: 'imageBackground', link: '/react-native/components/imageBackground' },
+            { text: 'textInput', link: '/react-native/components/textInput' },
+            { text: 'view', link: '/react-native/components/view' },
+            { text: 'scrollView', link: '/react-native/components/scrollView' },
+            { text: 'switch', link: '/react-native/components/switch' },
+            { text: 'modal', link: '/react-native/components/modal' },
+            { text: 'keyboardAvoidingView', link: '/react-native/components/keyboardAvoidingView' }
+          ]
+        },
+        {
+          text:'发布',
+          items:[
+            { text: '打包', link: '/react-native/build/build' },
+            { text: 'iOS上架', link: '/react-native/build/publish-ios' },
+            { text: 'Android上架', link: '/react-native/build/publish-android' },
           ]
         }
       ]
